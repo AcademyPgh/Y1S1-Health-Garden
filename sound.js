@@ -60,7 +60,6 @@ function playTransition(soundEffect, songName){
 }
 
 function muteSound(){
-  console.log("hi");
   isPlaying.muted = !isPlaying.muted;
 }
 

@@ -14,7 +14,7 @@
           <a class="fancybox" href="#journalField"><img src='./assets/journal.png' title="Dear Diary..." id="journal"></a>
           <p style="text-align: left;"><strong>Journal</strong></p>
         </div>
-        <p id = "energy" title="How much gusto you got!!"></p>
+        <p id = "energy" title="How much gusto you got!!" onclick="startTutorial();"></p>
         <p class="h"></p>
 
         <div class="section toolbar">
@@ -155,5 +155,52 @@
   <script type="text/javascript" src="./userActionFunctions.js"></script>
   <script type="text/javascript" src="./displayFunctions.js"></script>
   <script type="text/javascript" src="./gameloop.js"></script>
+
+  <script>
+  function startTutorial() {
+    if(tutorialCounter == 0){
+      flashLoop = 0;
+      while(flashLoop < 4){
+        $("#house01").animate({opacity: '0.2'},700);
+        $("#house01").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 1){
+      flashLoop = 0;
+      while(flashLoop < 4){
+        $("#spade01").animate({opacity: '0.2'},700);
+        $("#spade01").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 2){
+      flashLoop = 0;
+      while(flashLoop < 4){
+        $("#tulip01").animate({opacity: '0.2'},700);
+        $("#tulip01").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 3){
+      flashLoop = 0;
+      while(flashLoop < 4){
+        $("#water01").animate({opacity: '0.2'},700);
+        $("#water01").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 4){
+      flashLoop = 0;
+      while(flashLoop < 4){
+        $("#fertilize01").animate({opacity: '0.2'},700);
+        $("#fertilize01").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+
+    
+  };
+  </script>
 
 </html>

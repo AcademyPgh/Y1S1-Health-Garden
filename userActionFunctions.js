@@ -7,6 +7,11 @@ function waterPlant(x,y,id){
       { gameBoard[x][y].growthPoints += 1;}
     if (gameBoard[x][y].stateId == 1)
       { gameBoard[x][y].growthPoints += 1;}
+
+
+    //tutorial
+      flashLoop = 10;
+      tutorialCounter = 4;
   }
 }
 
@@ -43,6 +48,11 @@ function fertilizePlant(x, y, id){
     }
     if (gameBoard[x][y].stateId == 1)
     { gameBoard[x][y].growthPoints += 10;}
+
+
+  //tutorial
+      flashLoop = 10;
+      tutorialCounter = 5;
   }
 }
 
@@ -54,6 +64,11 @@ function terraformCell(x,y,id) {
     playSound("rake")
     currency.energy = currency.energy - actionEnergyAmount;
     updateEnergyAndSuncoins()
+
+    //tutorial
+      flashLoop = 10;
+      tutorialCounter = 2;
+
   }
   else if(currency.energy>= actionEnergyAmount && gameBoard[x][y].type!= "blank" && gameBoard[x][y].usable == true && gameBoard[x][y].stateId != 2){
     gameBoard[x][y].objectId = 0;
@@ -73,6 +88,11 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].objectId = 4;
       gameBoard[x][y].stateId = 0;
       gameBoard[x][y].usable = false;
+
+      //tutorial
+      flashLoop = 10;
+      tutorialCounter = 1;
+
     }
   }
   if(gameBoard[x][y].needTerraform==false && gameBoard[x][y].type=="blank" && currency.energy >= actionEnergyAmount)
@@ -86,6 +106,10 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].type = "tulip";
       gameBoard[x][y].objectId = 2;
       gameBoard[x][y].stateId = 0;
+
+      //tutorial
+      flashLoop = 10;
+      tutorialCounter = 3;
     }
     else if (dropped=="sunflower") {
       gameBoard[x][y].type = "sunflower";

@@ -14,6 +14,12 @@ var adultPoints = 50;
 var waterTimer = 1 * ticksPerMinute; // the higher the number, the longer it'll take for water to "evaporate."
 var fertilizerTimer = 3 * ticksPerMinute; // the higher the number, the longer it'll take for fertilizer to disappear.
 
+
+//Tutorial
+var flashLoop = false;
+var tutorialCounter = 0;
+
+
 var graphicId = [
   {name:"blank", state:[]},
   {name:"rose", state:[]},
