@@ -1,9 +1,10 @@
 var ticksPerMinute = 6000;
 var gameTick = 6000;
-var currency = {sunshine:10, energy:100, addEnergy: Date.now()}; //100 is the max energy
+var currency = {suncoins:10, energy:100, addEnergy: Date.now()}; //100 is the max energy
 var actionEnergyAmount = 10;
 var toDoListEnergy = 5;
-var journalSunshine = 20;
+var journalSuncoins = 20;
+var sunFertCost = 1;
 var timedEnergy = 5;
 var energyMax = 100;
 var boardWidth = 7;

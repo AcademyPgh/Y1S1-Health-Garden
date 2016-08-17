@@ -1,6 +1,6 @@
 function gameLoop ()
 {
-  updateEnergyAndSunshine();
+  updateEnergyAndSuncoins();
   for (var x = 0; x < boardLength; x++)
   {
     for (var y = 0; y < boardWidth; y++)

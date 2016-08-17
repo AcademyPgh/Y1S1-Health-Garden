@@ -57,8 +57,8 @@ function drawCell(x,y,id)
   addToDoToHouse(x,y);
 }
 
-function updateEnergyAndSunshine(){
-  document.getElementById("energy").innerHTML = "Energy: " + currency.energy + " | Sunshine: " + currency.sunshine;
+function updateEnergyAndSuncoins(){
+  document.getElementById("energy").innerHTML = "Energy: " + currency.energy + " | Suncoins: " + currency.suncoins;
   document.getElementById("energy").style.fontFamily = "pixelated";
 }
 

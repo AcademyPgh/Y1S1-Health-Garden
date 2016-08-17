@@ -19,18 +19,19 @@ function harvestPlant(x,y,id){
     gameBoard[x][y].harvest = true;
     gameBoard[x][y].growthPoints = 0;
     gameBoard[x][y].effects = false;
-    currency.sunshine += 10;
-    updateEnergyAndSunshine();
+    currency.suncoins += 10;
+    updateEnergyAndSuncoins();
   }
 }
 
 function fertilizePlant(x, y, id){
-  if(currency.energy >= actionEnergyAmount && gameBoard[x][y].type!="blank" && gameBoard[x][y].type!="house"){
+  if(currency.energy >= actionEnergyAmount && currency.suncoins >= sunFertCost && gameBoard[x][y].type!="blank" && gameBoard[x][y].type!="house"){
     gameBoard[x][y].needFertilizer = false;
     gameBoard[x][y].nextFertilizer = Date.now() + fertilizerTimer;
     playSound("jingle");
     currency.energy = currency.energy - actionEnergyAmount;
-    updateEnergyAndSunshine();
+    currency.suncoins = currency.suncoins - sunFertCost;
+    updateEnergyAndSuncoins();
 
     if (gameBoard[x][y].stateId == 0 && gameBoard[x][y].growthPoints <= teenPoints)
     {
@@ -52,7 +53,7 @@ function terraformCell(x,y,id) {
     gameBoard[x][y].needTerraform = false;
     playSound("rake")
     currency.energy = currency.energy - actionEnergyAmount;
-    updateEnergyAndSunshine()
+    updateEnergyAndSuncoins()
   }
   else if(currency.energy>= actionEnergyAmount && gameBoard[x][y].type!= "blank" && gameBoard[x][y].usable == true && gameBoard[x][y].stateId != 2){
     gameBoard[x][y].objectId = 0;
@@ -93,16 +94,16 @@ function placeGraphic(x,y,id, dropped){
     }
     /*You would need to add in new "else if" statements here if you wanted to include new flowers or decorations.*/
     currency.energy = currency.energy - actionEnergyAmount;
-    updateEnergyAndSunshine();
+    updateEnergyAndSuncoins();
   }
 }
 
 function unlockGraphic(lockedItemId, cost){
   var flowerCost = cost;
-  if(currency.sunshine>=flowerCost){
+  if(currency.suncoins>=flowerCost){
     playSound("click")
-    currency.sunshine = currency.sunshine - flowerCost;
-    updateEnergyAndSunshine();
+    currency.suncoins = currency.suncoins - flowerCost;
+    updateEnergyAndSuncoins();
     $("#" + lockedItemId + "01").show();
     $("#" + lockedItemId).hide();
   }

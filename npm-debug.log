@@ -1,0 +1,190 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'node-static' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'node-static', null ]
+7 verbose cache add spec node-static
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'node-static',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'node-static',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed node-static@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for node-static
+11 info addNameTag [ 'node-static', 'latest' ]
+12 silly mapToRegistry name node-static
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'node-static',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'node-static',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/node-static
+17 verbose addNameTag registry:https://registry.npmjs.org/node-static not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/node-static
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 9:33:35 AM
+21 verbose request id ff1c59aab4baf84b
+22 http request GET https://registry.npmjs.org/node-static
+23 http 200 https://registry.npmjs.org/node-static
+24 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 verbose headers   etag: '"F15UP69U5MV5SJN6VHPRHQG2F"',
+24 verbose headers   'content-type': 'application/json',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'content-length': '5686',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Wed, 06 Jul 2016 13:33:35 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '136',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-iad2141-IAD',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1467812015.720098,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 200,
+25 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 silly get     etag: '"F15UP69U5MV5SJN6VHPRHQG2F"',
+25 silly get     'content-type': 'application/json',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'content-length': '5686',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Wed, 06 Jul 2016 13:33:35 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '136',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-iad2141-IAD',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1467812015.720098,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose get saving node-static to /Users/marcsalo/.npm/registry.npmjs.org/node-static/.cache.json
+27 verbose correctMkdir /Users/marcsalo/.npm correctMkdir not in flight; initializing
+28 verbose makeDirectory /Users/marcsalo/.npm creation not in flight; initializing
+29 silly makeDirectory /Users/marcsalo/.npm uid: 501 gid: 20
+30 silly addNameTag next cb for node-static with tag latest
+31 silly addNamed node-static@0.7.7
+32 verbose addNamed "0.7.7" is a plain semver version for node-static
+33 silly mapToRegistry name node-static
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'node-static',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'node-static',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/node-static
+38 verbose addRemoteTarball https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz',
+39 verbose addRemoteTarball   '93081d834d9bd9d83737798df3da3cd538e8908a' ]
+40 info retry fetch attempt 1 at 9:33:36 AM
+41 info attempt registry request try #1 at 9:33:36 AM
+42 http fetch GET https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz
+43 http fetch 200 https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz
+44 silly fetchAndShaCheck shasum 93081d834d9bd9d83737798df3da3cd538e8908a
+45 verbose addTmpTarball /var/folders/v4/6fby261j0wq3rvsv70sdwcbm0000gn/T/npm-22106-b8df0c6f/registry.npmjs.org/node-static/-/node-static-0.7.7.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for node-static@0.7.7
+47 verbose correctMkdir /Users/marcsalo/.npm correctMkdir not in flight; initializing
+48 silly cache afterAdd node-static@0.7.7
+49 verbose afterAdd /Users/marcsalo/.npm/node-static/0.7.7/package/package.json not in flight; writing
+50 verbose correctMkdir /Users/marcsalo/.npm correctMkdir not in flight; initializing
+51 verbose afterAdd /Users/marcsalo/.npm/node-static/0.7.7/package/package.json written
+52 silly install resolved [ { name: 'node-static',
+52 silly install resolved     description: 'simple, compliant file streaming module for node',
+52 silly install resolved     url: 'http://github.com/cloudhead/node-static',
+52 silly install resolved     keywords: [ 'http', 'static', 'file', 'server' ],
+52 silly install resolved     author: { name: 'Alexis Sellier', email: 'self@cloudhead.net' },
+52 silly install resolved     contributors: [ [Object], [Object] ],
+52 silly install resolved     repository: { type: 'git', url: 'http://github.com/cloudhead/node-static' },
+52 silly install resolved     main: './lib/node-static',
+52 silly install resolved     scripts: { test: 'vows --spec --isolate' },
+52 silly install resolved     bin: { static: 'bin/cli.js' },
+52 silly install resolved     license: 'MIT',
+52 silly install resolved     dependencies: { optimist: '>=0.3.4', colors: '>=0.6.0', mime: '>=1.2.9' },
+52 silly install resolved     devDependencies: { request: 'latest', vows: 'latest' },
+52 silly install resolved     version: '0.7.7',
+52 silly install resolved     engines: { node: '>= 0.4.1' },
+52 silly install resolved     bugs: { url: 'https://github.com/cloudhead/node-static/issues' },
+52 silly install resolved     homepage: 'https://github.com/cloudhead/node-static',
+52 silly install resolved     directories: { example: 'examples', test: 'test' },
+52 silly install resolved     gitHead: '092d62eef7f557abcedc956cea577a9accd94c91',
+52 silly install resolved     _id: 'node-static@0.7.7',
+52 silly install resolved     _shasum: '93081d834d9bd9d83737798df3da3cd538e8908a',
+52 silly install resolved     _from: 'node-static@latest',
+52 silly install resolved     _npmVersion: '2.7.5',
+52 silly install resolved     _nodeVersion: '0.12.2',
+52 silly install resolved     _npmUser: { name: 'cloudhead', email: 'self@cloudhead.net' },
+52 silly install resolved     dist:
+52 silly install resolved      { shasum: '93081d834d9bd9d83737798df3da3cd538e8908a',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz' },
+52 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/node-static/-/node-static-0.7.7.tgz' } ]
+53 info install node-static@0.7.7 into /usr/local/lib
+54 info installOne node-static@0.7.7
+55 verbose installOne of node-static to /usr/local/lib not in flight; installing
+56 verbose correctMkdir /Users/marcsalo/.npm/_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory /Users/marcsalo/.npm/_locks creation not in flight; initializing
+58 silly makeDirectory /Users/marcsalo/.npm/_locks uid: 501 gid: 20
+59 verbose lock using /Users/marcsalo/.npm/_locks/node-static-bdc0099f99ada52d.lock for /usr/local/lib/node_modules/node-static
+60 silly install write writing node-static 0.7.7 to /usr/local/lib/node_modules/node-static
+61 verbose unbuild lib/node_modules/node-static
+62 silly gentlyRm /usr/local/lib/node_modules/node-static is being purged from base /usr/local
+63 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node-static
+64 verbose tar unpack /Users/marcsalo/.npm/node-static/0.7.7/package.tgz
+65 verbose tar unpacking to /usr/local/lib/node_modules/node-static
+66 silly gentlyRm /usr/local/lib/node_modules/node-static is being purged
+67 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node-static
+68 silly gunzTarPerm modes [ '755', '644' ]
+69 error tar.unpack untar error /Users/marcsalo/.npm/node-static/0.7.7/package.tgz
+70 verbose unlock done using /Users/marcsalo/.npm/_locks/node-static-bdc0099f99ada52d.lock for /usr/local/lib/node_modules/node-static
+71 verbose fstream_path /usr/local/lib/node_modules/node-static
+72 verbose fstream_type Directory
+73 verbose fstream_class DirWriter
+74 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/node-static'
+74 verbose stack     at Error (native)
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+75 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+75 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+76 verbose cwd /Users/marcsalo/Documents/AcademyPGH/Y1S1-Health-Garden
+77 error Darwin 15.5.0
+78 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "node-static"
+79 error node v4.4.7
+80 error npm  v2.15.8
+81 error path /usr/local/lib/node_modules/node-static
+82 error code EACCES
+83 error errno -13
+84 error syscall mkdir
+85 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/node-static'
+85 error     at Error (native)
+85 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/node-static']
+85 error   errno: -13,
+85 error   code: 'EACCES',
+85 error   syscall: 'mkdir',
+85 error   path: '/usr/local/lib/node_modules/node-static',
+85 error   fstream_type: 'Directory',
+85 error   fstream_path: '/usr/local/lib/node_modules/node-static',
+85 error   fstream_class: 'DirWriter',
+85 error   fstream_stack:
+85 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+85 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+85 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+86 error Please try running this command again as root/Administrator.
+87 verbose exit [ -13, true ]
+88 verbose unbuild lib/node_modules/node-static
+89 silly gentlyRm /usr/local/lib/node_modules/node-static is being purged from base /usr/local
+90 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/node-static

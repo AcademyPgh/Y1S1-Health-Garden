@@ -60,7 +60,7 @@ function accomplish() {
     if (currency.energy > energyMax){
       currency.energy = energyMax;
     }
-    updateEnergyAndSunshine();
+    updateEnergyAndSuncoins();
     playSound('checkmark');
 
     return false;
@@ -124,8 +124,8 @@ function addJournal() {
 
     if (fullEntry.entry !== ""){
       fullEntries.push(fullEntry);
-      currency.sunshine += journalSunshine;
-      updateEnergyAndSunshine();
+      currency.suncoins += journalSuncoins;
+      updateEnergyAndSuncoins();
       localStorage.setItem('fullEntry', JSON.stringify(fullEntries));
       playSound('tada');
     }
