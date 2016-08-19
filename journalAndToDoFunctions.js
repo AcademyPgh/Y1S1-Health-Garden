@@ -90,6 +90,9 @@ function show() {
 document.getElementById('add').addEventListener('click', add);
 show();
 
+
+//Journal Entry Area Below
+
 function get_entries() {
     var entries = new Array;
     var entry_str = localStorage.getItem('entry');
@@ -106,6 +109,22 @@ function get_full_entries(){
     fullEntries = JSON.parse(fullEntryStr);
   }
   return fullEntries;
+}
+
+function delete_entries(){
+    localStorage.clear();
+}
+
+function show_all_entries(){
+    var fullEntries = get_full_entries();
+    var newHtml = "<p>";
+
+    for(var i=0; i<fullEntries.length; i++){
+        newHtml += fullEntries[i].entry + "<br>"
+    };
+    newHtml += "</p>"
+
+    document.getElementById('pastEntry').innerHTML = newHtml;
 }
 
 function addJournal() {

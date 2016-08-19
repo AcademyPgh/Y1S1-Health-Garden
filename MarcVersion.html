@@ -13,7 +13,7 @@
           <p style="text-align: left;"><strong>Next Day</strong></p>
           <a class="fancybox" href="#journalField"><img src='./assets/journal.png' title="Dear Diary..." id="journal"></a>
           <p style="text-align: left;"><strong>Journal</strong></p>
-        </div>
+         </div>
         <p id = "energy" title="How much gusto you got!!" onclick="startTutorial();"></p>
         <p class="h"></p>
 
@@ -60,55 +60,10 @@
             <div class="b"></div>
           </div>
         </div>
-        <div class="section betweenBtns">
-          <div class="corner tl">
-            <div class="a"></div>
-            <div class="b"></div>
-            <div class="c"></div>
-          </div>
-          <div class="corner tr">
-            <div class="a"></div>
-            <div class="b"></div>
-            <div class="c"></div>
-          </div>
 
           <button class="section_content" title="Shhh. I want to listen to my own music." onclick='muteSound();' id="mute">Mute Music</button>
-
-          <div class="corner bl">
-            <div class="a"></div>
-            <div class="c"></div>
-            <div class="b"></div>
-          </div>
-          <div class="corner br">
-            <div class="a"></div>
-            <div class="c"></div>
-            <div class="b"></div>
-          </div>
-        </div>
-        <div class="section">
-          <div class="corner tl">
-            <div class="a"></div>
-            <div class="b"></div>
-            <div class="c"></div>
-          </div>
-          <div class="corner tr">
-            <div class="a"></div>
-            <div class="b"></div>
-            <div class="c"></div>
-          </div>
           <button class="section_content" title="SILENCE!!! (But just the sound effects)" onclick='muteEffects();' id="mute">Mute FX</button>
 
-          <div class="corner bl">
-            <div class="a"></div>
-            <div class="c"></div>
-            <div class="b"></div>
-          </div>
-          <div class="corner br">
-            <div class="a"></div>
-            <div class="c"></div>
-            <div class="b"></div>
-          </div>
-        </div>
         <div style="clear: left;"></div>
       </div>
         <div class="gameboard"></div>
@@ -121,22 +76,115 @@
         </div>
         <form id="journalField">
           <p>Enter your journal entry below:</p>
-          <textarea name="entry" maxlength="250" rows="5" cols="50" id="entry"></textarea><br>
+          <textarea name="entry" maxlength="250" rows="5" cols="45" id="entry"></textarea><br>
           <span class="errors"><p id="entry_error"></p></span>
-          <label for="uneasiness">Uneasiness</label>
-          <input type="range" name="uneasiness" min="0" max="10" id="uneasiness" class="stat">
+
+          <label for="uneasiness" title="Feeling of unease">Uneasiness</label>
           <label for="anger">Anger</label>
-          <input type="range" name="anger" min="0" max="10" id="anger" class="stat">
-          <label for="anxiety">Anxiety</label>
-          <input type="range" name="anxiety" min="0" max="10" id="anxiety" class="stat"><br/>
-          <label for="apathy">Apathy</label>
-          <input type="range" name="apathy" min="0" max="10" id="apathy" class="stat">
-          <label for="serenity">Serenity</label>
-          <input type="range" name="serenity" min="0" max="10" id="serenity" class="stat">
-          <label for="euphoria">Euphoria</label>
-          <input type="range" name="euphoria" min="0" max="10" id="euphoria" class="stat"><br/>
+          <label for="anxiety">Anxiety</label><br>
+
+          <input type="range" name="uneasiness" min="0" max="10" step="1" list="ticks" id="uneasiness" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <input type="range" name="anger" min="0" max="10" step="1" list="ticks" id="anger" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <input type="range" name="anxiety" min="0" max="10" step="1" list="ticks" id="anxiety" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <br/>
+
+          <label for="apathy"> Apathy </label>
+          <label for="serenity"> Serenity </label>
+          <label for="euphoria"> Euphoria </label><br>
+
+          <input type="range" name="apathy" min="0" max="10" step="1" list="ticks" id="apathy" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <input type="range" name="serenity" min="0" max="10" step="1" list="ticks" id="serenity" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <input type="range" name="euphoria" min="0" max="10" step="1" list="ticks" id="euphoria" class="stat">
+            <datalist id="ticks">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </datalist>
+          <br/>
+
+          <a id="pastEntriesBtn" class="fancybox" href="#pastEntryField" onclick="pastEntryShow();">Journal Log</a>
+        
           <input type="button" id="addJournal" value="Submit" style="margin: 0px auto 0px auto;">
         </form>
+        <div id="pastEntryField">
+          <p>Past Entries</p>
+          <div id="pastEntry"></div>
+          <a class="fancybox" href="#journalField">Back to Journal</a>
+          
+        </div>
     </div>
   </body>
 
@@ -157,6 +205,11 @@
   <script type="text/javascript" src="./gameloop.js"></script>
 
   <script>
+function pastEntryShow() {
+  $('pastEntriesBtn').click(show_all_entries());
+};
+  
+
   function startTutorial() {
     if(tutorialCounter == 0){
       flashLoop = 0;
