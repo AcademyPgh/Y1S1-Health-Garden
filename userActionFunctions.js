@@ -10,6 +10,7 @@ function waterPlant(x,y,id){
 
 
     //tutorial
+    if(tutorialOn){
       $('#water01').finish();
       flashLoop = 10;
       tutorialCounter = 4;
@@ -17,6 +18,7 @@ function waterPlant(x,y,id){
       $('#t' + (textCounter-1)).hide();
       $('#t' + textCounter).show();
       startTutorial();
+    };
   }
 }
 
@@ -56,13 +58,15 @@ function fertilizePlant(x, y, id){
 
 
       //tutorial
-      $('#fertilize01').finish();
-      flashLoop = 10;
-      tutorialCounter = 5;
-      textCounter ++;
-      $('#t' + (textCounter-1)).hide();
-      $('#t' + textCounter).show();
-      startTutorial();
+      if(tutorialOn){
+        $('#fertilize01').finish();
+        flashLoop = 10;
+        tutorialCounter = 5;
+        textCounter ++;
+        $('#t' + (textCounter-1)).hide();
+        $('#t' + textCounter).show();
+        startTutorial();
+      };
   }
 }
 
@@ -76,6 +80,7 @@ function terraformCell(x,y,id) {
     updateEnergyAndSuncoins()
 
     //tutorial
+    if(tutorialOn){
       $('#spade01').finish();
       flashLoop = 10;
       tutorialCounter = 2;
@@ -83,6 +88,7 @@ function terraformCell(x,y,id) {
       $('#t' + (textCounter-1)).hide();
       $('#t' + textCounter).show();
       startTutorial();
+    };
 
   }
   else if(currency.energy>= actionEnergyAmount && gameBoard[x][y].type!= "blank" && gameBoard[x][y].usable == true && gameBoard[x][y].stateId != 2){
@@ -104,13 +110,15 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].usable = false;
 
       //tutorial
-      $('#house01').finish();
-      flashLoop = 10;
-      tutorialCounter = 1;
-      textCounter ++;
-      $('#t' + (textCounter-1)).hide();
-      $('#t' + textCounter).show();
-      startTutorial();
+      if(tutorialOn){
+        $('#house01').finish();
+        flashLoop = 10;
+        tutorialCounter = 1;
+        textCounter ++;
+        $('#t' + (textCounter-1)).hide();
+        $('#t' + textCounter).show();
+        startTutorial();
+      };
 
     }
   }
@@ -127,13 +135,15 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].stateId = 0;
 
       //tutorial
-      $('#tulip01').finish();
-      flashLoop = 10;
-      tutorialCounter = 3;
-      textCounter ++;
-      $('#t' + (textCounter-1)).hide();
-      $('#t' + textCounter).show();
-      startTutorial();
+      if(tutorialOn){
+        $('#tulip01').finish();
+        flashLoop = 10;
+        tutorialCounter = 3;
+        textCounter ++;
+        $('#t' + (textCounter-1)).hide();
+        $('#t' + textCounter).show();
+        startTutorial();
+      };
     }
     else if (dropped=="sunflower") {
       gameBoard[x][y].type = "sunflower";

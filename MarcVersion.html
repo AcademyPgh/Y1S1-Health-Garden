@@ -21,18 +21,22 @@
         <div class="leftside">
           <button class="clock" onclick="updateGame();" title="Sleepies...Zzz" id="nextday"></button>
           <p style="text-align: left;"><strong>NextDay</strong></p>
+
           <a class="fancybox" href="#journalField">
             <img src='./assets/journal.png' title="Dear Diary..." id="journal">
           </a>
           <p style="text-align: left;"><strong>Journal</strong></p>
-          <a class="fancybox" href="#journalField">
-            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+
+          <a class="fancybox" href="#toDoField">
+            <img src='./assets/journal.png' title="Dear Diary..." id="toDo">
           </a>
           <p style="text-align: left;"><strong>ToDo's</strong></p>
-          <a class="fancybox" href="#journalField">
-            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+
+          <a class="fancybox" href="#badgeField">
+            <img src='./assets/journal.png' id="badge">
           </a>
           <p style="text-align: left;"><strong>Badges</strong></p>
+
           <button style="text-align: left;" onclick="startTutorial();"><strong>Tutorial</strong></button>
           <!-- <button onclick='muteSound();' id="mute">Mute Music</button>
           <button class="section_content" title="SILENCE!!!" onclick='muteEffects();' id="mute">Mute FX</button> -->
@@ -122,8 +126,6 @@
     </div>
       
 
-        
-
         <div id="toDoField">
           <p>Enter to-do items below:</p>
           <span class="errors"><p id="task_error"></p></span>
@@ -138,6 +140,12 @@
             </ul>
           </div>
         </div>
+
+        <div id="badgeField">
+          <h2>Badges</h2>
+          <div id="badgeInfo"></div>
+        </div>
+
         <form id="journalField">
           <p>Enter your journal entry below:</p>
           <textarea name="entry" maxlength="250" rows="5" cols="45" id="entry"></textarea><br>
@@ -264,19 +272,21 @@
   <script type="text/javascript" src="./interactivityFunctions.js"></script>
   <script type="text/javascript" src="./nextDayFunctions.js"></script>
   <script type="text/javascript" src="./journalAndToDoFunctions.js"></script>
+  <script type="text/javascript" src="./badges.js"></script>
   <script type="text/javascript" src="./userActionFunctions.js"></script>
   <script type="text/javascript" src="./displayFunctions.js"></script>
   <script type="text/javascript" src="./gameloop.js"></script>
 
   <script>
 function pastEntryShow() {
-  $('pastEntriesBtn').click(show_all_entries());
+  $('#pastEntriesBtn').click(show_all_entries());
 };
   
 
 
 
   function startTutorial() {
+    tutorialOn=true;
     if(tutorialCounter == 0){
       $('#t' + textCounter).show();
       flashLoop = 0;

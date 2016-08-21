@@ -16,9 +16,23 @@ var fertilizerTimer = 3 * ticksPerMinute; // the higher the number, the longer i
 
 
 //Tutorial
+var tutorialOn = false;
 var flashLoop = false;
 var tutorialCounter = 0;
 var textCounter = 0;
+
+
+var badges = [
+  {
+    name: "1st Journal", 
+    image: "<img src='./assets/rainbow.png'>",
+    acquired:true
+  },
+  {
+    name: "Finish Tutorial",
+    image: "<img src='./assets/exclamation_alert.png'>",
+    acquired:false
+  }];
 
 
 var graphicId = [

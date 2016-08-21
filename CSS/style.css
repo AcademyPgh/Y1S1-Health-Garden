@@ -68,6 +68,12 @@ label{
   font-family: pixelated;
   height: 300px;
 }
+#badgeField {
+  display: none;
+  font-family: pixelated;
+  height: 600px;
+  width: 600px;
+}
 
 #journal {
   cursor: url('../assets/hand.png'), default;
@@ -274,4 +280,13 @@ border-top: 5px solid #FF6600;
 }
 .unseen{
   display: none;
+}
+#badgeField{
+  text-align: center;
+}
+#badgeField h2{
+  text-decoration: underline;
+}
+#badgeInfo img{
+  align-content: center;
 }
