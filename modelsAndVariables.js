@@ -25,15 +25,16 @@ var textCounter = 0;
 var badges = [
   {
     name: "1st Journal", 
-    image: "<img src='./assets/rainbow.png'>",
-    acquired:true
+    bImage: "<img src='./assets/1st_journal_badge.png'>",
+    acquired:false
   },
   {
     name: "Finish Tutorial",
-    image: "<img src='./assets/exclamation_alert.png'>",
+    bImage: "<img src='./assets/exclamation_alert.png'>",
     acquired:false
   }];
 
+var noBadge = "<img src='./assets/empty_badge.png'>";
 
 var graphicId = [
   {name:"blank", state:[]},

@@ -2,6 +2,23 @@ $(document).ready(function() {
     $(".fancybox").fancybox();
 });
 
+function showBadges() {
+    var badgeArea = "";
+    for(var i=0; i<badges.length; i++){
+        badgeArea += "<p>" + badges[i].name + "</p>";
+        if(badges[i].acquired == true){
+            badgeArea += badges[i].bImage;
+            console.log("hi");
+        }
+        else{
+            badgeArea += noBadge;
+        };
+         badgeArea += "<br><br>";
+    };
+    console.log(badgeArea);
+    document.getElementById("badgeInfo").innerHTML = badgeArea;
+};
+
 function get_todos() {
     var todos = new Array;
     var todos_str = localStorage.getItem('todo');
@@ -148,6 +165,7 @@ function addJournal() {
       updateEnergyAndSuncoins();
       localStorage.setItem('fullEntry', JSON.stringify(fullEntries));
       playSound('tada');
+      badges[0].acquired = true;
     }
     else {
       errors += 1;

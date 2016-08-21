@@ -33,7 +33,7 @@
           <p style="text-align: left;"><strong>ToDo's</strong></p>
 
           <a class="fancybox" href="#badgeField">
-            <img src='./assets/journal.png' id="badge">
+            <img src='./assets/journal.png' id="badge" onclick="showBadges();">
           </a>
           <p style="text-align: left;"><strong>Badges</strong></p>
 
@@ -272,7 +272,6 @@
   <script type="text/javascript" src="./interactivityFunctions.js"></script>
   <script type="text/javascript" src="./nextDayFunctions.js"></script>
   <script type="text/javascript" src="./journalAndToDoFunctions.js"></script>
-  <script type="text/javascript" src="./badges.js"></script>
   <script type="text/javascript" src="./userActionFunctions.js"></script>
   <script type="text/javascript" src="./displayFunctions.js"></script>
   <script type="text/javascript" src="./gameloop.js"></script>
@@ -281,14 +280,11 @@
 function pastEntryShow() {
   $('#pastEntriesBtn').click(show_all_entries());
 };
-  
-
-
 
   function startTutorial() {
     tutorialOn=true;
+    $('#t' + textCounter).show();
     if(tutorialCounter == 0){
-      $('#t' + textCounter).show();
       flashLoop = 0;
       while(flashLoop < 10){
         $("#house01").animate({opacity: '0.2'},700);

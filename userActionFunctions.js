@@ -16,7 +16,6 @@ function waterPlant(x,y,id){
       tutorialCounter = 4;
       textCounter ++;
       $('#t' + (textCounter-1)).hide();
-      $('#t' + textCounter).show();
       startTutorial();
     };
   }
@@ -64,7 +63,6 @@ function fertilizePlant(x, y, id){
         tutorialCounter = 5;
         textCounter ++;
         $('#t' + (textCounter-1)).hide();
-        $('#t' + textCounter).show();
         startTutorial();
       };
   }
@@ -86,7 +84,6 @@ function terraformCell(x,y,id) {
       tutorialCounter = 2;
       textCounter ++;
       $('#t' + (textCounter-1)).hide();
-      $('#t' + textCounter).show();
       startTutorial();
     };
 
@@ -109,14 +106,14 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].stateId = 0;
       gameBoard[x][y].usable = false;
 
+      tutorialCounter = 1;
+      textCounter ++;
+
       //tutorial
       if(tutorialOn){
         $('#house01').finish();
         flashLoop = 10;
-        tutorialCounter = 1;
-        textCounter ++;
         $('#t' + (textCounter-1)).hide();
-        $('#t' + textCounter).show();
         startTutorial();
       };
 
@@ -141,7 +138,6 @@ function placeGraphic(x,y,id, dropped){
         tutorialCounter = 3;
         textCounter ++;
         $('#t' + (textCounter-1)).hide();
-        $('#t' + textCounter).show();
         startTutorial();
       };
     }
