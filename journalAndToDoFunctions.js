@@ -19,6 +19,7 @@ function add() {
     if (task !== ""){
       todos.push(task);
       document.getElementById('task').value=''; //clears out the form text field after task is added.
+      $('#toDoExample').hide();
     }
     else {
       errors += 1;
