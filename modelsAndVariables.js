@@ -18,6 +18,7 @@ var fertilizerTimer = 3 * ticksPerMinute; // the higher the number, the longer i
 //Tutorial
 var flashLoop = false;
 var tutorialCounter = 0;
+var textCounter = 0;
 
 
 var graphicId = [

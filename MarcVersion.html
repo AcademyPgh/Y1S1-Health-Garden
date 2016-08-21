@@ -1,22 +1,45 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" href="./fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="./CSS/style.css">
-  </head>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="./fancyBox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
 
-  <body onload="loadSound();">
-    <div class="gameArea">
-      <div class="wholeMenuArea">
-        <div class="leftside"><button class="clock" onclick="updateGame();" title="Sleepies...Zzz" id="nextday"></button>
-          <p style="text-align: left;"><strong>Next Day</strong></p>
-          <a class="fancybox" href="#journalField"><img src='./assets/journal.png' title="Dear Diary..." id="journal"></a>
+<body onload="loadSound();">
+  <div class="gameArea">
+    <div class="row">
+      <div class="col-xs-6">
+        <p class="title">Zen Garden</p>
+      </div>
+      <div class="col-xs-6">
+        <p id = "energy" class="resourceDisplay" title="How much gusto you got!!"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-1">
+        <div class="leftside">
+          <button class="clock" onclick="updateGame();" title="Sleepies...Zzz" id="nextday"></button>
+          <p style="text-align: left;"><strong>NextDay</strong></p>
+          <a class="fancybox" href="#journalField">
+            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+          </a>
           <p style="text-align: left;"><strong>Journal</strong></p>
-         </div>
-        <p id = "energy" title="How much gusto you got!!" onclick="startTutorial();"></p>
-        <p class="h"></p>
-
+          <a class="fancybox" href="#journalField">
+            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+          </a>
+          <p style="text-align: left;"><strong>ToDo's</strong></p>
+          <a class="fancybox" href="#journalField">
+            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+          </a>
+          <p style="text-align: left;"><strong>Badges</strong></p>
+          <button style="text-align: left;" onclick="startTutorial();"><strong>Tutorial</strong></button>
+          <!-- <button onclick='muteSound();' id="mute">Mute Music</button>
+          <button class="section_content" title="SILENCE!!!" onclick='muteEffects();' id="mute">Mute FX</button> -->
+        </div>
+      </div>
+      <div class="col-xs-11">
+        <div class="alignTool">
         <div class="section toolbar">
           <div class="corner tl">
             <div class="a"></div>
@@ -60,13 +83,46 @@
             <div class="b"></div>
           </div>
         </div>
+        </div>
 
-          <button class="section_content" title="Shhh. I want to listen to my own music." onclick='muteSound();' id="mute">Mute Music</button>
-          <button class="section_content" title="SILENCE!!! (But just the sound effects)" onclick='muteEffects();' id="mute">Mute FX</button>
-
-        <div style="clear: left;"></div>
+          <div style="clear: left;"></div>
+          <div class="gameboard"></div>
       </div>
-        <div class="gameboard"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 tutorialArea">
+        <div id="t0" class="unseen">
+          <p>
+            Before you do anything, you should pick where you want to put your house.
+            <span><img src="./assets/house.png"></span>
+            <br>Zen garden uses drag and drop functionality for menu items.
+          </p>
+        </div>
+        <div id="t1" class="unseen">
+          <p>You must prepare the dirt by shoveling
+              <span><img src="./assets/spade.png"></span>
+              before you can plant.
+          </p>
+        </div>
+        <div id="t2" class="unseen">
+          <p>Now that you prepared the dirt, drag the tulip <span><img src="./assets/tulip_icon.png"></span>onto it to plant your first plant.
+          </p>
+        </div>
+        <div id="t3" class="unseen">
+          <p>Go ahead and water <span><img src="./assets/waterCan.png"></span>your baby plant.
+          </p>
+        </div>
+        <div id="t4" class="unseen">
+          <p>Drag the fertilizer<span><img src="./assets/fertilizer_bag.png"></span>onto your plant to help it grow.
+          <br>Fertilizer costs energy AND Sun Coins.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+      
+
+        
 
         <div id="toDoField">
           <p>Enter to-do items below:</p>
@@ -193,8 +249,8 @@
           <a class="fancybox" href="#journalField">Back to Journal</a>
           
         </div>
-    </div>
-  </body>
+  </div>
+</body>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -218,10 +274,13 @@ function pastEntryShow() {
 };
   
 
+
+
   function startTutorial() {
     if(tutorialCounter == 0){
+      $('#t' + textCounter).show();
       flashLoop = 0;
-      while(flashLoop < 4){
+      while(flashLoop < 10){
         $("#house01").animate({opacity: '0.2'},700);
         $("#house01").animate({opacity: '1'},700);
         flashLoop ++;
@@ -229,7 +288,7 @@ function pastEntryShow() {
     }
     else if(tutorialCounter == 1){
       flashLoop = 0;
-      while(flashLoop < 4){
+      while(flashLoop < 10){
         $("#spade01").animate({opacity: '0.2'},700);
         $("#spade01").animate({opacity: '1'},700);
         flashLoop ++;
@@ -237,7 +296,7 @@ function pastEntryShow() {
     }
     else if(tutorialCounter == 2){
       flashLoop = 0;
-      while(flashLoop < 4){
+      while(flashLoop < 10){
         $("#tulip01").animate({opacity: '0.2'},700);
         $("#tulip01").animate({opacity: '1'},700);
         flashLoop ++;
@@ -245,7 +304,7 @@ function pastEntryShow() {
     }
     else if(tutorialCounter == 3){
       flashLoop = 0;
-      while(flashLoop < 4){
+      while(flashLoop < 10){
         $("#water01").animate({opacity: '0.2'},700);
         $("#water01").animate({opacity: '1'},700);
         flashLoop ++;
@@ -253,7 +312,7 @@ function pastEntryShow() {
     }
     else if(tutorialCounter == 4){
       flashLoop = 0;
-      while(flashLoop < 4){
+      while(flashLoop < 10){
         $("#fertilize01").animate({opacity: '0.2'},700);
         $("#fertilize01").animate({opacity: '1'},700);
         flashLoop ++;

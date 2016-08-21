@@ -10,8 +10,13 @@ function waterPlant(x,y,id){
 
 
     //tutorial
+      $('#water01').finish();
       flashLoop = 10;
       tutorialCounter = 4;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      $('#t' + textCounter).show();
+      startTutorial();
   }
 }
 
@@ -50,9 +55,14 @@ function fertilizePlant(x, y, id){
     { gameBoard[x][y].growthPoints += 10;}
 
 
-  //tutorial
+      //tutorial
+      $('#fertilize01').finish();
       flashLoop = 10;
       tutorialCounter = 5;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      $('#t' + textCounter).show();
+      startTutorial();
   }
 }
 
@@ -66,8 +76,13 @@ function terraformCell(x,y,id) {
     updateEnergyAndSuncoins()
 
     //tutorial
+      $('#spade01').finish();
       flashLoop = 10;
       tutorialCounter = 2;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      $('#t' + textCounter).show();
+      startTutorial();
 
   }
   else if(currency.energy>= actionEnergyAmount && gameBoard[x][y].type!= "blank" && gameBoard[x][y].usable == true && gameBoard[x][y].stateId != 2){
@@ -82,7 +97,6 @@ function terraformCell(x,y,id) {
 function placeGraphic(x,y,id, dropped){
   if(gameBoard[x][y].type=="blank" && currency.energy >= actionEnergyAmount){
     if(dropped=="house"){
-      $(".toolbar").css("width", "42%");
       gameBoard[x][y].type = "house";
       playSound("jingle");
       gameBoard[x][y].objectId = 4;
@@ -90,8 +104,13 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].usable = false;
 
       //tutorial
+      $('#house01').finish();
       flashLoop = 10;
       tutorialCounter = 1;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      $('#t' + textCounter).show();
+      startTutorial();
 
     }
   }
@@ -108,8 +127,13 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].stateId = 0;
 
       //tutorial
+      $('#tulip01').finish();
       flashLoop = 10;
       tutorialCounter = 3;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      $('#t' + textCounter).show();
+      startTutorial();
     }
     else if (dropped=="sunflower") {
       gameBoard[x][y].type = "sunflower";
