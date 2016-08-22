@@ -74,7 +74,7 @@ label{
   width: 600px;
 }
 
-#journal {
+.cursorHand{
   cursor: url('../assets/hand.png'), default;
 }
 
@@ -254,6 +254,7 @@ border-top: 5px solid #FF6600;
 .toolbarItems{
   height: 64px;
   width: 64px;
+  cursor: url('../assets/hand.png'), default;
 }
 .alignTool{
   padding-left: 20%;

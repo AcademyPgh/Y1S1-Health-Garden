@@ -19,25 +19,25 @@
     <div class="row">
       <div class="col-xs-1">
         <div class="leftside">
-          <button class="clock" onclick="updateGame();" title="Sleepies...Zzz" id="nextday"></button>
+          <button class="clock" onclick="updateGame();" title="Fast Forward" id="nextday"></button>
           <p style="text-align: left;"><strong>NextDay</strong></p>
 
           <a class="fancybox" href="#journalField">
-            <img src='./assets/journal.png' title="Dear Diary..." id="journal">
+            <img src='./assets/journal.png' title="Dear Diary..." id="journal" class="cursorHand">
           </a>
           <p style="text-align: left;"><strong>Journal</strong></p>
 
           <a class="fancybox" href="#toDoField">
-            <img src='./assets/journal.png' title="Dear Diary..." id="toDo">
+            <img src='./assets/todo_icon.png' title="To Do List" id="toDo" class="cursorHand">
           </a>
           <p style="text-align: left;"><strong>ToDo's</strong></p>
 
           <a class="fancybox" href="#badgeField">
-            <img src='./assets/badges_icon.png' id="badge" onclick="showBadges();">
+            <img src='./assets/badges_icon.png' id="badge" title="Accomplishments" onclick="showBadges();" class="cursorHand">
           </a>
           <p style="text-align: left;"><strong>Badges</strong></p>
 
-          <button style="text-align: left;" onclick="startTutorial();"><strong>Tutorial</strong></button>
+          <button style="text-align: left;" onclick="startTutorial();" title="HELP!" class="cursorHand"><strong>Tutorial</strong></button>
           <!-- <button onclick='muteSound();' id="mute">Mute Music</button>
           <button class="section_content" title="SILENCE!!!" onclick='muteEffects();' id="mute">Mute FX</button> -->
         </div>
