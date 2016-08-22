@@ -42,7 +42,9 @@ var graphicId = [
   {name:"tulip", state:[]},
   {name:"sunflower", state:[]},
   {name:"house", state:[]},
-  {name: "alert", state:[]}];
+  {name: "alert", state:[]},
+  {name: "currency", state:[]}
+  ];
   //GraphicId[0].state[0] is the default which has nothing to layer at all.
 graphicId[0].state[0] = "<img src='./assets/blank.png'>";
 graphicId[1].state[0] = "<img src='./assets/stage_1_baby.png'>";
@@ -56,6 +58,7 @@ graphicId[3].state[1] = "<img src='./assets/stage_2_teen.png'>";
 graphicId[3].state[2] = "<img src='./assets/stage_3_sunflower.png'>";
 graphicId[4].state[0] = "<img src='./assets/house.png'>";
 graphicId[5].state[0] = "<img src='./assets/exclamation_alert.png'>";
+graphicId[6].state[0] = "<img src='./assets/energy_icon.png'>";
 
 //This is the default cell state at the beginning of the game.
 gameBoard = new Array(boardLength); 

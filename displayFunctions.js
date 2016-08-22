@@ -58,7 +58,7 @@ function drawCell(x,y,id)
 }
 
 function updateEnergyAndSuncoins(){
-  document.getElementById("energy").innerHTML = "Energy: " + currency.energy + " | Suncoins: " + currency.suncoins;
+  document.getElementById("energy").innerHTML = graphicId[6].state[0] + " = " + currency.energy + " | Suncoins: " + currency.suncoins;
   document.getElementById("energy").style.fontFamily = "pixelated";
 }
 
