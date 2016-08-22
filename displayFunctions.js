@@ -70,6 +70,15 @@ function addToDoToHouse(x,y){
     $(".house01").click(function(){
         $("#toDoField").show();
         $(".house01").css('cursor', 'url(./assets/hand.png), auto');
+
+        //Tutorial
+        if(tutorialOn && textCounter == 9){
+          flashLoop = 10;
+          tutorialCounter = 10;
+          textCounter ++;
+          $('#t' + (textCounter-1)).hide();
+          startTutorial();
+        };
     });
     $(".house01").css('cursor', 'url(./assets/hand.png), auto');
   }

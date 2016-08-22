@@ -33,7 +33,7 @@
           <p style="text-align: left;"><strong>ToDo's</strong></p>
 
           <a class="fancybox" href="#badgeField">
-            <img src='./assets/journal.png' id="badge" onclick="showBadges();">
+            <img src='./assets/badges_icon.png' id="badge" onclick="showBadges();">
           </a>
           <p style="text-align: left;"><strong>Badges</strong></p>
 
@@ -64,15 +64,15 @@
           The parameters that unlockGraphic has are: the id of the plant that is locked (sunflower NOT sunflower01),
           and the amount of suncoins it costs to buy that plant
         -->
-          <img class="toolbarItems" title="Your Home: Place this anywhere" src='./assets/house.png' id="house01" data-id="house">
+          <img class="toolbarItems" title="Your Home: Place on any dirt" src='./assets/house.png' id="house01" data-id="house">
           <img class="toolbarItems" title="Shovel: Use this to prepare dirt for planting" src='./assets/spade.png' id="spade01" data-id="terraform" >
           <img class="toolbarItems" title="Watering Can: Keep your plants hydrated" src='./assets/waterCan.png' id="water01" data-id="water" >
           <img class="toolbarItems" title="Fertilizer: Help your plants grow with these nutrients" src='./assets/fertilizer_bag.png' id="fertilize01" data-id="fertilize" >
           <img class="toolbarItems" title="Tulip: Pretty, but quite normal" src='./assets/tulip_icon.png' id="tulip01" data-id="tulip" >
           <img class="toolbarItems lockedItem" title="Rose: Very pretty, but don't get pricked by thorns!" src='./assets/rose_icon.png' id="rose01" data-id="rose">
-          <img class="toolbarItems" title="Costs 10 suncoins" src='./assets/rose_icon_locked.png' id="rose" data-id="rose" onclick="unlockGraphic('rose', 10)">
+          <img class="toolbarItems" title="Costs 10 Suncoins" src='./assets/rose_icon_locked.png' id="rose" data-id="rose" onclick="unlockGraphic('rose', 10)">
           <img class="toolbarItems lockedItem" title="Sunflower: Look how happy!" src='./assets/sunflower_icon.png' id="sunflower01" data-id="sunflower">
-          <img class="toolbarItems" title="Costs 20 suncoins" src='./assets/sunflower_icon_locked.png' id="sunflower" data-id="sunflower" onclick="unlockGraphic('sunflower', 20)">
+          <img class="toolbarItems" title="Costs 20 Cuncoins" src='./assets/sunflower_icon_locked.png' id="sunflower" data-id="sunflower" onclick="unlockGraphic('sunflower', 20)">
           <img class="toolbarItems" title="Harvests plants that are fully grown" src='./assets/glove.png' id="harvest01" data-id="harvest" >
 
 
@@ -97,39 +97,64 @@
       <div class="col-xs-12 tutorialArea">
         <div id="t0" class="unseen">
           <p>
-            Before you do anything, you should pick where you want to put your house.
-            <span><img src="./assets/house.png"></span>
-            <br>Zen garden uses drag and drop functionality for menu items.
+            To begin, drag your <span><img src="./assets/house.png"></span>to an empty space.
           </p>
         </div>
         <div id="t1" class="unseen">
-          <p>You must prepare the dirt by shoveling
-              <span><img src="./assets/spade.png"></span>
-              before you can plant.
+          <p>Next, till a space for planting by dragging the <span><img src="./assets/spade.png"></span>to an empty space.
           </p>
         </div>
         <div id="t2" class="unseen">
-          <p>Now that you prepared the dirt, drag the tulip <span><img src="./assets/tulip_icon.png"></span>onto it to plant your first plant.
+          <p>Drag an unlocked <span><img src="./assets/tulip_icon.png"></span>to a tilled space to to plant it.
           </p>
         </div>
         <div id="t3" class="unseen">
-          <p>Go ahead and water <span><img src="./assets/waterCan.png"></span>your baby plant.
+          <p>Plants grow at different rates.<br> Drag the<span><img src="./assets/waterCan.png"></span>to your plant regularly to make it grow.
           </p>
         </div>
         <div id="t4" class="unseen">
-          <p>Drag the fertilizer<span><img src="./assets/fertilizer_bag.png"></span>onto your plant to help it grow.
-          <br>Fertilizer costs energy AND Sun Coins.
+          <p>Drag the<span><img src="./assets/fertilizer_bag.png"></span>onto your plant to help boost it's growth.
           </p>
         </div>
-  
+        <div id="t5" class="unseen">
+          <p>Click "Next Day" to check on the progrees of your plants. Make sure to<span><img src="./assets/waterCan.png"></span>and<span><img src="./assets/fertilizer_bag.png"></span> as needed.
+          </p>
+        </div>
+        <div id="t6" class="unseen">
+          <p>When your plant is fully grown you can harvest it using the<span><img src="./assets/glove.png"></span><button onclick="continueTutorial();">Continue</button>
+          </p>
+        </div>
+        <div id="t7" class="unseen">
+          <p>Every action you do to maintain your garden takes "Energy" except for <span><img src="./assets/waterCan.png"></span>.<br> Energy refills slowly over time.<button onclick="continueTutorial();">Continue</button>
+          </p>
+        </div>
+        <div id="t8" class="unseen">
+          <p>You can also refill "Energy" faster by adding and completing tasks on your to-do list.<button onclick="continueTutorial();">Continue</button>
+          </p>
+        </div>
+        <div id="t9" class="unseen">
+          <p>Add a task you have to do today to your to-do list by clicking on<span><img src="./assets/house.png"></span>.<br> When you complete the task, click the check mark. To remove a task, click on the X.
+          </p>
+        </div>
+        <div id="t10" class="unseen">
+          <p>You can unlock new plants by using "SunCoins". When you have enough SunCoins, you can purchase new plants.<br>Click on the<span><img src="./assets/rose_icon_locked.png"></span>to unlock it.
+          </p>
+        </div>
+        <div id="t11" class="unseen">
+          <p>Making journal entries help you express your feelings, gauge your mood, think things through, and earns you "Suncoins".<button onclick="continueTutorial();">Continue</button>
+          </p>
+        </div>
+        <div id="t12" class="unseen">
+          <p>To make a journal entry, click on<span><img src="./assets/journal.png"></span> and write about whatever is going on in your head or in your life.
+          </p>
+        </div>
       </div>
     </div>
-      
 
         <div id="toDoField">
           <p>Enter to-do items below:</p>
           <span class="errors"><p id="task_error"></p></span>
-          <input id="task" type="text"><button id="add" title="Put it on the list ya'll!">Add</button>
+          <input id="task" type="text"><button id="add" title="Add to your To-Do List!">Add</button>
           <div id="todos"></div>
           <div id="toDoExample">
           <br><br><br><br>
@@ -151,11 +176,11 @@
           <textarea name="entry" maxlength="250" rows="5" cols="45" id="entry"></textarea><br>
           <span class="errors"><p id="entry_error"></p></span>
 
-          <label for="uneasiness" title="Feeling of unease">Uneasiness</label>
-          <label for="anger">Anger</label>
-          <label for="anxiety">Anxiety</label><br>
+          <label for="serenity" title="Balanced Mood">Serenity</label>
+          <label for="anger" title="Upset or Mad">Anger</label>
+          <label for="anxiety" title="Nervousness">Anxiety</label><br>
 
-          <input type="range" name="uneasiness" min="0" max="10" step="1" list="ticks" id="uneasiness" class="stat">
+          <input type="range" name="serenity" title="" min="0" max="10" step="1" list="ticks" id="serenity" class="stat">
             <datalist id="ticks">
               <option>0</option>
               <option>1</option>
@@ -199,9 +224,9 @@
             </datalist>
           <br/>
 
-          <label for="apathy"> Apathy </label>
-          <label for="serenity"> Serenity </label>
-          <label for="euphoria"> Euphoria </label><br>
+          <label for="apathy" title="Uninterested in Everything"> Apathy </label>
+          <label for="melancholy" title="Unable to Experience Pleasure"> Melancholy </label>
+          <label for="euphoria" title="Beyond Normal Happiness (Mania)"> Euphoria </label><br>
 
           <input type="range" name="apathy" min="0" max="10" step="1" list="ticks" id="apathy" class="stat">
             <datalist id="ticks">
@@ -217,7 +242,7 @@
               <option>9</option>
               <option>10</option>
             </datalist>
-          <input type="range" name="serenity" min="0" max="10" step="1" list="ticks" id="serenity" class="stat">
+          <input type="range" name="melancholy" min="0" max="10" step="1" list="ticks" id="melancholy" class="stat">
             <datalist id="ticks">
               <option>0</option>
               <option>1</option>
@@ -324,9 +349,52 @@ function pastEntryShow() {
         flashLoop ++;
       };
     }
-
-    
+    else if(tutorialCounter == 5){
+      flashLoop = 0;
+      while(flashLoop < 10){
+        $("#nextday").animate({opacity: '0.2'},700);
+        $("#nextday").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 10){
+      flashLoop = 0;
+      while(flashLoop < 10){
+        $("#rose").animate({opacity: '0.2'},700);
+        $("#rose").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
+    else if(tutorialCounter == 12){
+      flashLoop = 0;
+      while(flashLoop < 10){
+        $("#journal").animate({opacity: '0.2'},700);
+        $("#journal").animate({opacity: '1'},700);
+        flashLoop ++;
+      };
+    }
   };
+
+  function continueTutorial() {
+    if(tutorialOn){
+      flashLoop = 10;
+      tutorialCounter ++;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      startTutorial();
+    };
+  }
+  function finishTutorial() {
+    if(textCounter==12){
+      $('#journal').finish();
+      $('#t' + textCounter).hide();
+      textCounter = 0;
+      tutorialOn = false;
+      tutorialCounter = 0;
+      badges[1].acquired = true;
+    };
+  };
+  document.getElementById('journal').addEventListener('click', finishTutorial);
   </script>
 
 </html>

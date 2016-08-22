@@ -2,6 +2,15 @@ function updateGame(){
   playTransition("rooster", "song1");
   currency.energy = energyMax;
   updateEnergyAndSuncoins();
+  //tutorial
+      if(tutorialOn && textCounter == 5){
+        $('#nextday').finish();
+        flashLoop = 10;
+        tutorialCounter = 6;
+        textCounter ++;
+        $('#t' + (textCounter-1)).hide();
+        startTutorial();
+      };
   for(var i=0; i<boardLength; i++){
     for(var j=0; j<boardWidth; j++){
     setTimeout(nextDay, 1000, i, j);

@@ -10,7 +10,7 @@ function waterPlant(x,y,id){
 
 
     //tutorial
-    if(tutorialOn){
+    if(tutorialOn && textCounter == 3){
       $('#water01').finish();
       flashLoop = 10;
       tutorialCounter = 4;
@@ -57,7 +57,7 @@ function fertilizePlant(x, y, id){
 
 
       //tutorial
-      if(tutorialOn){
+      if(tutorialOn && textCounter == 4){
         $('#fertilize01').finish();
         flashLoop = 10;
         tutorialCounter = 5;
@@ -78,7 +78,7 @@ function terraformCell(x,y,id) {
     updateEnergyAndSuncoins()
 
     //tutorial
-    if(tutorialOn){
+    if(tutorialOn && textCounter == 1){
       $('#spade01').finish();
       flashLoop = 10;
       tutorialCounter = 2;
@@ -132,7 +132,7 @@ function placeGraphic(x,y,id, dropped){
       gameBoard[x][y].stateId = 0;
 
       //tutorial
-      if(tutorialOn){
+      if(tutorialOn && textCounter == 2){
         $('#tulip01').finish();
         flashLoop = 10;
         tutorialCounter = 3;
@@ -154,11 +154,24 @@ function placeGraphic(x,y,id, dropped){
 
 function unlockGraphic(lockedItemId, cost){
   var flowerCost = cost;
-  if(currency.suncoins>=flowerCost){
+  if(currency.suncoins>=flowerCost || tutorialOn){
     playSound("click")
     currency.suncoins = currency.suncoins - flowerCost;
+    if(currency.suncoins < 0){
+      currency.suncoins = 0;
+    };
     updateEnergyAndSuncoins();
     $("#" + lockedItemId + "01").show();
     $("#" + lockedItemId).hide();
+
+    //Tutorial
+    if(tutorialOn && textCounter == 10){
+      $('#rose').finish();
+      flashLoop = 10;
+      tutorialCounter = 11;
+      textCounter ++;
+      $('#t' + (textCounter-1)).hide();
+      startTutorial();
+    };
   }
 }

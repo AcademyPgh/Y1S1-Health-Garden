@@ -13,7 +13,7 @@ function showBadges() {
         else{
             badgeArea += noBadge;
         };
-         badgeArea += "<br><br>";
+         badgeArea += "<br>--------------<br>";
     };
     console.log(badgeArea);
     document.getElementById("badgeInfo").innerHTML = badgeArea;
@@ -149,7 +149,7 @@ function addJournal() {
     var entry = document.getElementById('entry').value;
     var fullEntry = {};
     fullEntry.entry = entry;
-    fullEntry.uneasiness = document.getElementById('uneasiness').value;
+    fullEntry.melancholy = document.getElementById('melancholy').value;
     fullEntry.anger = document.getElementById('anger').value;
     fullEntry.anxiety = document.getElementById('anxiety').value;
     fullEntry.apathy = document.getElementById('apathy').value;
