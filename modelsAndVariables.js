@@ -59,6 +59,7 @@ graphicId[3].state[2] = "<img src='./assets/stage_3_sunflower.png'>";
 graphicId[4].state[0] = "<img src='./assets/house.png'>";
 graphicId[5].state[0] = "<img src='./assets/exclamation_alert.png'>";
 graphicId[6].state[0] = "<img src='./assets/energy_icon.png'>";
+graphicId[6].state[1] = "<img src='./assets/suncoin_icon.png'>";
 
 //This is the default cell state at the beginning of the game.
 gameBoard = new Array(boardLength); 
