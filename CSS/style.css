@@ -6,12 +6,6 @@
 button {
   font-family: pixelated;
 }
-.dJ{
-  max-width: 30px;
-  max-height: 30px;
-  padding-bottom: 50px;
-  padding-right: 40px;
-}
 .mute{
   margin-top: 10px;
   margin-left: 20px;
@@ -26,7 +20,7 @@ button {
 }
 
 #energy {
-  font-size: 30px;
+  font-size: 25px;
   width: 100%;
   float: right;
   text-align: right;
@@ -144,9 +138,9 @@ background: rgba(255,255,255,.5);
     height: 100px;
 }
 img {
-    image-rendering: pixelated;
-    width: 64px;
-    height: 64px;
+  image-rendering: pixelated;
+  width: 64px;
+  height: 64px;
 }
 .info {
   image-rendering: pixelated;
@@ -241,7 +235,6 @@ border-top: 5px solid #FF6600;
 .toolbar{
   height: auto;
   margin-right: 0px;
-  margin-bottom: 10px;
   border-style: solid;
   background-color: #87CEEB;
   width: 69%;
@@ -272,6 +265,10 @@ border-top: 5px solid #FF6600;
 .tutorialArea p{
   font-size: 15px;
   color: black;
+}
+.tutorialArea img{
+  height: 40px;
+  width: 40px;
 }
 .unseen{
   display: none;
