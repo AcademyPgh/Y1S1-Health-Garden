@@ -1,14 +1,28 @@
 @font-face {
-font-family: pixelated;
-src: url(PressStart2P.ttf);
+  font-family: pixelated;
+  src: url(PressStart2P.ttf);
 }
 
 button {
   font-family: pixelated;
 }
+.dJ{
+  max-width: 30px;
+  max-height: 30px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+}
+.mute{
+  margin-top: 10px;
+  margin-left: 20px;
+  image-rendering: pixelated;
+  width: 30px;
+  height: 30px;
+  cursor: url('../assets/hand.png'), default;
+}
 
 #addJournal{
-margin: 0px auto 0px auto;
+  margin: 0px auto 0px auto;
 }
 
 #energy {
@@ -21,11 +35,6 @@ margin: 0px auto 0px auto;
 .title{
   font-size: 40px;
   text-align: center;
-}
-
-#mute {
-font-size: 20px;
-font-family: pixelated;
 }
 
 body {
@@ -139,20 +148,6 @@ img {
     width: 64px;
     height: 64px;
 }
-
-.clock {
-  image-rendering: pixelated;
-  background:url(../assets/next_day.png) no-repeat;
-  background-size: 64px 64px;
-  background-position: center;
-  width: 64px;
-  height: 64px;
-  color: black;
-  padding: 50px 0px 0px 0px;
-  cursor: url('../assets/hand.png'), default;
-  border: none;
-}
-
 .info {
   image-rendering: pixelated;
   background:url(../assets/questionMark.png) no-repeat;

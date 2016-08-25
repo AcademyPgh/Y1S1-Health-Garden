@@ -10,7 +10,7 @@
   <div class="gameArea">
     <div class="row">
       <div class="col-xs-6">
-        <p class="title">Garden Phase</p>
+        <p class="title"><button class="dJ" onclick="delete_entries();">*</button> Garden Phase</p>
       </div>
       <div class="col-xs-6">
         <p id = "energy" class="resourceDisplay" title="How much gusto you got!!"></p>
@@ -37,7 +37,10 @@
           </a>
           <p style="text-align: left;"><strong>Badges</strong></p>
 
-          <button style="text-align: left;" onclick="startTutorial();" title="HELP!" class="cursorHand"><strong>Tutorial</strong></button>
+          </strong></button>
+          <img class="mute" src="./assets/no_music_icon.png" title="Mute Sound" onclick="muteSound(); muteEffects();">
+          <p style="text-align: left;"><strong>Mute</strong></p>
+          <button style="text-align: left;" onclick="startTutorial();" title="HELP!" class="cursorHand"><strong>Tutorial
           <!-- <button onclick='muteSound();' id="mute">Mute Music</button>
           <button class="section_content" title="SILENCE!!!" onclick='muteEffects();' id="mute">Mute FX</button> -->
         </div>
